@@ -1,0 +1,30 @@
+name: tiktok
+on:
+  workflow_dispatch:
+  # schedule:
+  # - cron: "0 */6 * * *" # every 6 hours
+  push:
+    branches: [master]
+
+env:
+  GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
+  UNSPLASH_TOKEN: ${{secrets.UNSPLASH_TOKEN}}
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: FedericoCarboni/setup-ffmpeg@v2
+
+      - run: npm i
+      - run: |
+          node main.js
+          cd remotion && npm i && npm run build
+
+      # - run: ffmpeg -i outputs/shorts.mp4 -af "volume=5.0" -c:v copy outputs/shorts_boosted.mp4
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: video
+          path: outputs/shorts.mp4
