@@ -44,6 +44,28 @@ export const MyComposition = (props: any) => {
 									videoConfig.fps * (word.end_time - word.start_time)
 								)}
 							>
+								{data.unsplash_images.hasOwnProperty(word.word) ? (
+									<AbsoluteFill
+										style={{
+											top: '20%',
+											display: 'flex',
+											alignContent: 'center',
+											justifyItems: 'center',
+											justifyContent: 'center',
+											flexDirection: 'row',
+										}}
+									>
+										<Img
+											src={
+												data.unsplash_images[
+													word.word as keyof typeof data.unsplash_images
+												]
+											}
+											style={{maxHeight: '20%', borderRadius: '5%'}}
+											width="auto"
+										></Img>
+									</AbsoluteFill>
+								) : null}
 								<AbsoluteFill
 									style={{
 										top: '45%',
@@ -74,7 +96,6 @@ export const MyComposition = (props: any) => {
 										top: '9%',
 										textAlign: 'center',
 										fontSize: '2.5em',
-										// opacity: '0.75',
 										color: selectedColor,
 									}}
 								></AbsoluteFill>
