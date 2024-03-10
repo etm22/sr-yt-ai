@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@google/generative-ai": "^0.2.1",
+    "axios": "^1.6.7",
     "dotenv": "^16.4.5",
+    "pos": "^0.4.2",
     "ws": "^8.16.0"
   }
 }

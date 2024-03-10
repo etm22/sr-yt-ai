@@ -1,6 +1,8 @@
-const { generateJoke } = require("./services/gemini");
-const { convertTTS } = require("./services/tts");
 const fs = require("fs/promises");
+const { generateJoke } = require("./services/gemini");
+const { extractNouns } = require("./services/noun");
+const { convertTTS } = require("./services/tts");
+const { getImagesUnsplash } = require("./services/unsplash");
 
 
 (async () => {
@@ -17,6 +19,22 @@ const fs = require("fs/promises");
     const joke_tts_data = await convertTTS(joke, "en_us_006")
     await fs.writeFile(`remotion/public/joke.wav`, joke_tts_data.audio);
 
+    // unsplash images
+    const nouns = extractNouns(text)
+    const unsplash_images = {}
+
+    for (let idx = 0; idx < nouns.length; idx++) {
+        let noun = nouns[idx];
+        let noun_images
+        if (noun == "intelligence") {
+            new_noun = "robot"
+            noun_images = await getImagesUnsplash(new_noun)
+        } else {
+            noun_images = await getImagesUnsplash(noun)
+
+        }
+        unsplash_images[noun] = noun_images[getRandomInt(0, noun_images.length - 1)]
+    }
 
     const remotion_data = {
         prompt: selected_prompt.user_prompt,
@@ -26,12 +44,12 @@ const fs = require("fs/promises");
             7
         )}.mp4`,
         joke: await generateJoke(selected_prompt.user_prompt),
+        unsplash_images,
         alignment_prompt: payload,
         alignment_joke: joke_tts_data.payload,
 
     }
     await fs.writeFile("remotion/public/remotion.json", JSON.stringify(remotion_data))
-
 
     // TODO: set used
 
