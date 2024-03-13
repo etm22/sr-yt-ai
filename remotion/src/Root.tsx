@@ -8,13 +8,13 @@ export const RemotionRoot: React.FC = () => {
 	const selectedColor = colors[Math.floor(Math.random() * colors.length)];
 
 	const duration =
-		data.alignment_prompt.duration + data.alignment_joke.duration + 4 * 2 + 3;
+		data.alignment_prompt.duration + data.alignment_joke.duration + 4 * 2 + 2;
 	return (
 		<>
 			<Composition
 				id="MyComp"
 				component={MyComposition}
-				durationInFrames={Math.round(duration * 30)}
+				durationInFrames={Math.round(duration * 24)}
 				fps={24}
 				width={1080}
 				height={1920}
