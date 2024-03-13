@@ -9,6 +9,7 @@ on:
 env:
   GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
   UNSPLASH_TOKEN: ${{secrets.UNSPLASH_TOKEN}}
+  IDEO_URL: ${{secrets.IDEO_URL}}
 
 jobs:
   main:
