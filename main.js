@@ -3,11 +3,13 @@ const { generateJoke } = require("./services/gemini");
 const { extractNouns } = require("./services/noun");
 const { convertTTS } = require("./services/tts");
 const { getImagesUnsplash } = require("./services/unsplash");
-
+require("dotenv").config();
 
 (async () => {
+    // Get prompt
     const prompts_json = JSON.parse(await fs.readFile("./data/prompts.json", "utf-8"))
     const selected_prompt = prompts_json.find(prompt => !prompt.hasOwnProperty("used"))
+    console.log("Prompt: ", selected_prompt.user_prompt)
 
     // create tts + alignment
     const text = `I asked artificial intelligence to create images of ${selected_prompt.user_prompt} here are the results`
@@ -38,7 +40,7 @@ const { getImagesUnsplash } = require("./services/unsplash");
 
     const remotion_data = {
         prompt: selected_prompt.user_prompt,
-        images: selected_prompt.responses.map(r => `https://ideogram.ai/api/images/direct/${r.response_id}.jpg`),
+        images: selected_prompt.responses.map(r => `${process.env.IDEO_URL}/${r.response_id}`),
         bg_video: `https://huggingface.co/upmr/temp/resolve/main/m${getRandomInt(
             1,
             7

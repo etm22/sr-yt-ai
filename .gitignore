@@ -2,3 +2,4 @@ node_modules
 *.wav
 remotion/public/*.json
 .env
+*.png
