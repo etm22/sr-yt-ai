@@ -8,7 +8,7 @@ require("dotenv").config();
 (async () => {
     // Get prompt
     const prompts_json = JSON.parse(await fs.readFile("./data/prompts.json", "utf-8"))
-    const selected_prompt = prompts_json.find(prompt => !prompt.hasOwnProperty("used"))
+    const selected_prompt = prompts_json[0] // used prompts are deleted
     console.log("Prompt: ", selected_prompt.user_prompt)
 
     // create tts + alignment
@@ -53,8 +53,9 @@ require("dotenv").config();
     }
     await fs.writeFile("remotion/public/remotion.json", JSON.stringify(remotion_data))
 
-    // TODO: set used
-
+    // Remove used prompt from json
+    let updated_prompts = prompts_json.filter(p => p.request_id != selected_prompt.request_id);
+    await fs.writeFile("./data/prompts.json", JSON.stringify(updated_prompts))
 })()
 
 function getRandomInt(min, max) {
