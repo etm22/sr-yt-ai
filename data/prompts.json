@@ -1,1 +1,69 @@
-[]
+[
+    {
+        "user": {
+            "user_id": "jVlVQkQoSxa63Fsu145ISg",
+            "photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocLGgbgks9QYFvUxl9BmEfHCrft3zpl_d4yTNrBNR-h1REI=s96-c",
+            "display_handle": "yvsg",
+            "subscription_plan_id": null,
+            "badge": null
+        },
+        "user_prompt": "A superhero donut fighting off coffee stains",
+        "private": false,
+        "request_id": "UCAqtEYuSc-oUKRpcOcoog",
+        "responses": [
+            {
+                "response_id": "ATR_aJWgS1qrZnRts4SMAA",
+                "prompt": "A playful and quirky illustration of a superhero donut, complete with a heroic pose and a colorful cape. The donut is fighting off coffee stains in the form of mischievous, blob-like creatures. The background is a cozy kitchen, with a cup of coffee sitting on a table, and a sprinkle of sugar and creamer nearby. The overall atmosphere is light-hearted and humorous, with a touch of nostalgia.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": true,
+                "cover": true,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "CJ7nBmz6RAC9AIwAdAnCsQ",
+                "prompt": "A whimsical illustration of a superhero donut, complete with a cape and mask, valiantly battling against coffee stains. The stains are depicted as menacing, creature-like blots, with the donut showing determination in its eyes. The background is a cozy kitchen table, with a cup of coffee and a crumb-filled plate nearby.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "XdmCoLh1RQaMzrpaLvG75g",
+                "prompt": "A playful illustration of a superhero donut, dressed in a cape and mask, battling against coffee stains. The donut has a smiley face and a courageous expression. The coffee stains, in the form of villainous blots, are attempting to surround and overtake the heroic donut. The background is a colorful kitchen counter, with cups of coffee and various pastries nearby.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "xpHTIUPrRhK2Vxa4iavE8w",
+                "prompt": "A playful and imaginative illustration of a superhero donut, dressed in a cape and mask, fighting off coffee stains that have come to life. The donut is made of a golden, glazed exterior, with a soft and delicious interior. The coffee stains, in various shades of brown, are depicted as sneaky, mischievous creatures. The background is a cozy kitchen setting, with cups and saucers scattered about.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            }
+        ],
+        "creation_time_float": 1710338773.436227,
+        "resolution": 1024,
+        "height": 1024,
+        "width": 1024,
+        "user_hparams": {
+            "style": "photo",
+            "aspect_ratio": "1:1"
+        },
+        "aspect_ratio": "1:1",
+        "model_version": "V_0_3",
+        "cover_response_id": "ATR_aJWgS1qrZnRts4SMAA",
+        "is_completed": true,
+        "has_started": true
+    }
+]
