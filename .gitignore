@@ -3,3 +3,4 @@ node_modules
 remotion/public/*.json
 .env
 *.png
+*.mp4

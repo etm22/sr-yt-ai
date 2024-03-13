@@ -41,9 +41,9 @@ require("dotenv").config();
     const remotion_data = {
         prompt: selected_prompt.user_prompt,
         images: selected_prompt.responses.map(r => `${process.env.IDEO_URL}/${r.response_id}`),
-        bg_video: `https://huggingface.co/upmr/temp/resolve/main/m${getRandomInt(
+        bg_video: `https://huggingface.co/${process.env.HF_USERNAME}/videos/resolve/main/Minecraft/Clip%20${getRandomInt(
             1,
-            7
+            10
         )}.mp4`,
         joke: await generateJoke(selected_prompt.user_prompt),
         unsplash_images,
