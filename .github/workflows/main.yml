@@ -11,6 +11,7 @@ env:
   UNSPLASH_TOKEN: ${{secrets.UNSPLASH_TOKEN}}
   IDEO_URL: ${{secrets.IDEO_URL}}
   HF_USERNAME: ${{secrets.HF_USERNAME}}
+  YT_UPLOADER_API: ${{secrets.YT_UPLOADER_API}}
 
 jobs:
   main:
@@ -26,7 +27,9 @@ jobs:
 
       - run: ffmpeg -i outputs/shorts.mp4 -af "volume=2.0" -c:v copy outputs/shorts_boosted.mp4
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: video
-          path: outputs/shorts_boosted.mp4
+      - run: node upload.js
+
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: video
+      #     path: outputs/shorts_boosted.mp4

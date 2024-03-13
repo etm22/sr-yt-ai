@@ -4,3 +4,4 @@ remotion/public/*.json
 .env
 *.png
 *.mp4
+outputs/
