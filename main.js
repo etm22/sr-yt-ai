@@ -8,6 +8,11 @@ require("dotenv").config();
 (async () => {
     // Get prompt
     const prompts_json = JSON.parse(await fs.readFile("./data/prompts.json", "utf-8"))
+    if (prompts_json.length == 0) {
+        console.log("No prompts found...")
+        process.exit();
+    }
+
     const selected_prompt = prompts_json[0] // used prompts are deleted
     console.log("Prompt: ", selected_prompt.user_prompt)
 

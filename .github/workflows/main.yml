@@ -28,6 +28,13 @@ jobs:
       - run: ffmpeg -i outputs/shorts.mp4 -af "volume=2.0" -c:v copy outputs/shorts_boosted.mp4
 
       - run: node upload.js
+      - run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
+          git push
 
       # - uses: actions/upload-artifact@v3
       #   with:
