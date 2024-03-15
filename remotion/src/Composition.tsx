@@ -44,7 +44,7 @@ export const MyComposition = (props: any) => {
 									videoConfig.fps * (word.end_time - word.start_time)
 								)}
 							>
-								{data.unsplash_images.hasOwnProperty(word.word) ? (
+								{data.unsplash_images_prompt.hasOwnProperty(word.word) ? (
 									<AbsoluteFill
 										style={{
 											top: '20%',
@@ -57,8 +57,8 @@ export const MyComposition = (props: any) => {
 									>
 										<Img
 											src={
-												data.unsplash_images[
-													word.word as keyof typeof data.unsplash_images
+												data.unsplash_images_prompt[
+													word.word as keyof typeof data.unsplash_images_prompt
 												]
 											}
 											style={{maxHeight: '20%', borderRadius: '5%'}}
@@ -75,21 +75,21 @@ export const MyComposition = (props: any) => {
 										fontFamily: 'Obelix Pro Italic',
 									}}
 								>
-									<h1>{word.word}</h1>
+									<h1>{word.word == ',' ? '' : word.word}</h1>
 								</AbsoluteFill>
 							</Series.Sequence>
 						);
 					})}
 					{/* silence */}
-					{/* <Series.Sequence durationInFrames={videoConfig.fps * 0.5}>
-					<div></div>
-				</Series.Sequence> */}
+					<Series.Sequence durationInFrames={videoConfig.fps * 0.5}>
+						<div></div>
+					</Series.Sequence>
 
 					{data.images.map((img, idx: number) => {
 						return (
 							<Series.Sequence
 								key={`image-${idx}`}
-								durationInFrames={Math.round(videoConfig.fps * 2)}
+								durationInFrames={Math.round(videoConfig.fps * 2.5)}
 							>
 								<AbsoluteFill
 									style={{
@@ -141,7 +141,7 @@ export const MyComposition = (props: any) => {
 			<AbsoluteFill>
 				<Sequence
 					from={
-						videoConfig.fps * Math.round(data.alignment_prompt.duration + 9)
+						videoConfig.fps * Math.round(data.alignment_prompt.duration + 12)
 					}
 				>
 					<Audio src={staticFile('joke.wav')} />
@@ -154,6 +154,28 @@ export const MyComposition = (props: any) => {
 										videoConfig.fps * (word.end_time - word.start_time)
 									)}
 								>
+									{data.unsplash_images_joke.hasOwnProperty(word.word) ? (
+										<AbsoluteFill
+											style={{
+												top: '20%',
+												display: 'flex',
+												alignContent: 'center',
+												justifyItems: 'center',
+												justifyContent: 'center',
+												flexDirection: 'row',
+											}}
+										>
+											<Img
+												src={
+													data.unsplash_images_joke[
+														word.word as keyof typeof data.unsplash_images_joke
+													]
+												}
+												style={{maxHeight: '20%', borderRadius: '5%'}}
+												width="auto"
+											></Img>
+										</AbsoluteFill>
+									) : null}
 									<AbsoluteFill
 										style={{
 											top: '45%',

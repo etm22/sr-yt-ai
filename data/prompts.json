@@ -7,52 +7,52 @@
             "subscription_plan_id": null,
             "badge": null
         },
-        "user_prompt": "a robotic rat eating a car made out of cheese",
+        "user_prompt": "a lizard wearing spiderman costume and fighting rats in batman costume",
         "private": false,
-        "request_id": "evpZVHHORxOc5qOcPnPuAg",
+        "request_id": "sMLcvnZtQ7S0hyY0yYrztQ",
         "responses": [
             {
-                "response_id": "Dn5mqKO2Sv-k_8CLYN3tdg",
-                "prompt": "A quirky and amusing illustration of a robotic rat, with gears and wires visible, sitting on a wheel-shaped cheese block, munching away at a miniature car made entirely of cheese. The rat has a cheerful expression, and the cheese car has its headlights and wheels made of cheese, giving the scene a playful and humorous touch.",
-                "self_like": false,
-                "num_likes": 0,
-                "num_remixes": 0,
-                "highest_fidelity": false,
-                "cover": false,
-                "is_autoprompt": true
-            },
-            {
-                "response_id": "U9eAF5D3QbuZk4aImdoYYA",
-                "prompt": "A quirky and imaginative illustration of a robotic rat, meticulously designed with gears and wires, sitting on its hind legs and nibbling on a miniature car crafted entirely from cheese. The rat's metal body glimmers under the light, while the cheese car has wheels and a tiny license plate. The background is a futuristic, industrial setting with pipes and gears, giving the scene a steampunk vibe.",
-                "self_like": false,
-                "num_likes": 0,
-                "num_remixes": 0,
-                "highest_fidelity": false,
-                "cover": false,
-                "is_autoprompt": true
-            },
-            {
-                "response_id": "WtjDjn0QQCCQRfZhwwiHeA",
-                "prompt": "A quirky, playful illustration of a robotic rat sitting on a block of cheese, gnawing on a miniature car made entirely of cheese. The rat's metallic body and gears are visible, showcasing its mechanical nature. The cheese car has wheels, windows, and a detailed design reminiscent of classic automobiles. The overall scene is set against a backdrop of a steampunk-inspired workshop, with gears, pipes, and other mechanical elements.",
-                "self_like": false,
-                "num_likes": 0,
-                "num_remixes": 0,
-                "highest_fidelity": false,
-                "cover": false,
-                "is_autoprompt": true
-            },
-            {
-                "response_id": "dneFEbVnQFC2rGvFD9Rfyg",
-                "prompt": "A quirky, creative illustration of a robotic rat, wearing a miniature chef's hat, sitting on a block of cheese that has been molded into a miniature car. The rat is nibbling on the cheese, leaving behind small bits of cheese debris. The background is a futuristic, cheese-themed landscape with other cheese-based vehicles and structures. The overall tone of the image is humorous and playful, with a touch of nostalgia.",
+                "response_id": "BU1yhl6OSyu1S5JXCUz1uw",
+                "prompt": "A hilarious and quirky illustration of a small lizard donning a homemade Spider-Man costume, complete with web shooters and a spider emblem. The lizard is engaged in an action-packed battle with rats dressed as Batman, wearing cape and cowl. The scene is set in a dimly lit, urban sewer-like environment, with graffiti and abandoned crates. The overall atmosphere is playful and humorous, with a touch of comic book aesthetic.",
                 "self_like": false,
                 "num_likes": 0,
                 "num_remixes": 0,
                 "highest_fidelity": true,
                 "cover": true,
                 "is_autoprompt": true
+            },
+            {
+                "response_id": "LP2u5cZyQ36f4eCI13_amQ",
+                "prompt": "A humorous illustration of a lizard donning a miniature Spider-Man costume, complete with web shooters, and fearlessly battling rats dressed as Batman. The rats are wearing black and yellow Batman suits with pointed ears and a utility belt. The scene takes place in a dimly lit, urban environment with graffiti-covered walls and a sense of action and adventure.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "VgU3CRuYSQ6q7x0wWPCfMg",
+                "prompt": "A comical and quirky illustration of a green lizard dressed as Spider-Man, with eight legs dangling and webs shooting from its back. The lizard is engaged in a battle with two rats donning Batman costumes, wearing masks and capes, while wielding small bat-shaped weapons. The scene takes place in a dimly lit, urban alleyway, with graffiti and a city skyline visible in the background.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "WmJs1ZrfTVaFLI5qi9DF8Q",
+                "prompt": "A hilarious and imaginative cartoon illustration of a lizard dressed as Spider-Man, courageously fighting off rats dressed as Batman. The lizard dons the iconic red and blue suit and web-shooters, while the rats wear the dark cape and cowl. The scene takes place in a dimly lit, urban sewer, with graffiti and a grating in the background. The atmosphere is light-hearted and comical, with a touch of nostalgia.",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
             }
         ],
-        "creation_time_float": 1710449881.65829,
+        "creation_time_float": 1710505264.56931,
         "resolution": 1024,
         "height": 1024,
         "width": 1024,
@@ -62,7 +62,7 @@
         },
         "aspect_ratio": "1:1",
         "model_version": "V_0_3",
-        "cover_response_id": "dneFEbVnQFC2rGvFD9Rfyg",
+        "cover_response_id": "BU1yhl6OSyu1S5JXCUz1uw",
         "is_completed": true,
         "has_started": true
     }

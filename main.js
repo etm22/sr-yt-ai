@@ -17,7 +17,7 @@ require("dotenv").config();
     console.log("Prompt: ", selected_prompt.user_prompt)
 
     // create tts + alignment
-    const text = `I asked artificial intelligence to create images of ${selected_prompt.user_prompt} here are the results`
+    const text = `I asked artificial intelligence to create images of ${selected_prompt.user_prompt}, here are the results`
     const { audio, payload } = await convertTTS(text, "en_us_006")
     await fs.writeFile(`remotion/public/audio.wav`, audio);
 
@@ -26,13 +26,14 @@ require("dotenv").config();
     const joke_tts_data = await convertTTS(joke, "en_us_006")
     await fs.writeFile(`remotion/public/joke.wav`, joke_tts_data.audio);
 
-    // unsplash images
+    // unsplash images for prompt
     const nouns = extractNouns(text)
-    const unsplash_images = {}
+    const unsplash_images_prompt = {}
 
     for (let idx = 0; idx < nouns.length; idx++) {
         let noun = nouns[idx];
         let noun_images
+        if (noun == "results" || noun == "images") continue;
         if (noun == "intelligence") {
             new_noun = "robot"
             noun_images = await getImagesUnsplash(new_noun)
@@ -40,7 +41,17 @@ require("dotenv").config();
             noun_images = await getImagesUnsplash(noun)
 
         }
-        unsplash_images[noun] = noun_images[getRandomInt(0, noun_images.length - 1)]
+        unsplash_images_prompt[noun] = noun_images[getRandomInt(0, noun_images.length - 1)]
+    }
+
+    // unsplash images for joke
+    const nouns_joke = extractNouns(joke)
+    const unsplash_images_joke = {}
+
+    for (let idx = 0; idx < nouns_joke.length; idx++) {
+        const noun = nouns_joke[idx];
+        const noun_images = await getImagesUnsplash(noun)
+        unsplash_images_joke[noun] = noun_images[getRandomInt(0, noun_images.length - 1)]
     }
 
     const remotion_data = {
@@ -51,7 +62,8 @@ require("dotenv").config();
             10
         )}.mp4`,
         joke: await generateJoke(selected_prompt.user_prompt),
-        unsplash_images,
+        unsplash_images_prompt,
+        unsplash_images_joke,
         alignment_prompt: payload,
         alignment_joke: joke_tts_data.payload,
 
