@@ -1,1 +1,69 @@
-[]
+[
+    {
+        "user": {
+            "user_id": "jVlVQkQoSxa63Fsu145ISg",
+            "photo_url": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocLGgbgks9QYFvUxl9BmEfHCrft3zpl_d4yTNrBNR-h1REI=s96-c",
+            "display_handle": "yvsg",
+            "subscription_plan_id": null,
+            "badge": null
+        },
+        "user_prompt": "a golden penguin eating a pizza near a volcano erupting ketchup, cinematic, photo, vibrant",
+        "private": false,
+        "request_id": "kepemO97QzOU9JIBMGXWLg",
+        "responses": [
+            {
+                "response_id": "1O67l2jPRJq0UPnk9QKsgA",
+                "prompt": "A striking cinematic photo of a golden penguin sitting on a rock, munching on a pizza. The background is a fiery volcano, erupting with ketchup instead of lava. The overall atmosphere is vibrant and playful, with a touch of surrealism., photo, cinematic, vibrant",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "76dT6XhNRNyhUWXKsYDQVA",
+                "prompt": "A captivating cinematic photo of a golden penguin, perched near a volcano that erupts with ketchup instead of lava. The penguin is happily nibbling on a pizza, with a smile on its face. The overall ambiance of the image is vibrant and playful, with a touch of surrealism., photo, cinematic, vibrant",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": true,
+                "cover": true,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "o5l9uhx-QJOfANLaIYBKmw",
+                "prompt": "A captivating cinematic photo of a golden penguin perched on a rock, enjoying a slice of pizza. Behind the penguin, a volcano erupts, spewing ketchup instead of lava. The sky is vibrant with a blend of oranges and reds. The overall atmosphere of the photo is playful and surreal, with a touch of humor., photo, cinematic, vibrant",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            },
+            {
+                "response_id": "yz5mE4quQhCvv4nVxSbfYg",
+                "prompt": "A striking cinematic photo of a vibrant golden penguin, perched on a boulder near a fiery volcano erupting ketchup. The penguin holds a half-eaten pizza, with a cheerful expression. The background is a mix of lush green vegetation and a bright, sunlit sky, creating a surreal and playful atmosphere., photo, cinematic, vibrant",
+                "self_like": false,
+                "num_likes": 0,
+                "num_remixes": 0,
+                "highest_fidelity": false,
+                "cover": false,
+                "is_autoprompt": true
+            }
+        ],
+        "creation_time_float": 1710620773.575917,
+        "resolution": 1024,
+        "height": 1024,
+        "width": 1024,
+        "user_hparams": {
+            "style": "photo",
+            "aspect_ratio": "1:1"
+        },
+        "aspect_ratio": "1:1",
+        "model_version": "V_0_3",
+        "cover_response_id": "76dT6XhNRNyhUWXKsYDQVA",
+        "is_completed": true,
+        "has_started": true
+    }
+]
